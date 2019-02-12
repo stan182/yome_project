@@ -1,0 +1,52 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:recommended",
+		"tslint-react",
+		"tslint-eslint-rules",
+		"tslint-config-prettier"
+	],
+	"jsRules": {},
+	"rules": {
+		"no-unused-variable": true,
+		"interface-name": [
+			true,
+			"never-prefix"
+		],
+		"label-position": false,
+		"member-access": false,
+		"member-ordering": [
+			true,
+			{
+				"order": [
+					"public-static-field",
+					"public-instance-field",
+					"public-constructor",
+					"private-static-field",
+					"private-instance-field",
+					"private-constructor",
+					"public-instance-method",
+					"protected-instance-method",
+					"private-instance-method"
+				]
+			}
+		],
+		"object-literal-sort-keys": false,
+		"only-arrow-functions": [
+			true,
+			"allow-named-functions"
+		],
+		"ordered-imports": [
+			true,
+			{
+				"named-imports-order": "any",
+				"import-sources-order": "any",
+				"module-source-path": "any"
+			}
+		],
+		"prettier": true
+	},
+	"rulesDirectory": [
+		"node_modules/tslint-plugin-prettier"
+	]
+}

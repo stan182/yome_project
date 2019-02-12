@@ -1,0 +1,47 @@
+{
+  "name": "yome",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "server": "react-native start --reset-cache",
+    "build": "react-native run-android",
+    "tsc": "node_modules/.bin/tsc -w"
+  },
+  "dependencies": {
+    "crypto-js": "3.1.9-1",
+    "lodash": "4.17.11",
+    "prettier": "1.15.2",
+    "react": "16.6.1",
+    "react-native-cache-image": "1.0.0",
+    "react-native-fs": "2.12.1",
+    "react-navigation": "3.0.0-rc.5",
+    "tslint": "5.11.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.119",
+    "@types/react": "16.7.7",
+    "@types/react-native": "0.57.13",
+    "@types/react-navigation": "3.0.1",
+    "babel-jest": "23.6.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.48.5",
+    "react-native": "0.57.7",
+    "react-native-gesture-handler": "1.0.15",
+    "react-test-renderer": "16.6.1",
+    "tslint-config-prettier": "1.16.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "tslint-react": "3.6.0",
+    "typescript": "3.2.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
