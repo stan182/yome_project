@@ -3,11 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "server": "react-native start --reset-cache",
-    "build": "react-native run-android",
-    "tsc": "node_modules/.bin/tsc -w"
+    "build": "npm install -g react-native react-native-cli && yarn && node_modules/.bin/tsc && react-native run-ios"
   },
   "dependencies": {
     "crypto-js": "3.1.9-1",
