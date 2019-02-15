@@ -1,22 +1,52 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
-    container: {
+const commonStyles = StyleSheet.create({
+    scrollView: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
+    }
+})
+
+const homeScreenStyles = StyleSheet.create({
+    mainContainer: {
+        flex: 1,
         backgroundColor: "#F5FCFF",
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: "center",
-        margin: 10,
+    container: {
+        marginVertical: 20,
+        justifyContent: "center",
+        alignItems: "center"
     },
-    instructions: {
-        textAlign: "center",
-        color: "#333333",
-        marginBottom: 5,
-    },
-});
+    eventContainer: {
+           backgroundColor: "#935ff14a",
+           borderWidth: 1,
+           padding: 5,
+           margin: 10,
+           borderRadius: 10,
+           width: 300,
+           height: 50,
+    }
+})
 
-export { styles };
+const roundButtonStyles = StyleSheet.create({
+    container: {
+        position: "absolute",
+        bottom: 10,
+        right: 10,
+        margin: 10,
+        width: 64,
+        height: 64,
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "flex-end",
+        backgroundColor: "#935ff1",
+        borderRadius: 64,
+    },
+    title: {
+        color: "white",
+        fontSize: 32,
+        alignSelf: "center",
+        lineHeight: 32,
+    }
+})
+
+export { styles, roundButtonStyles, commonStyles, homeScreenStyles };
