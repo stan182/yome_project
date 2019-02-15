@@ -4,4 +4,4 @@ for build app:
 
 cd yome_project/app
 
-sh build.sh
+npm run build
