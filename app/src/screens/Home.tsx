@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { View, ScrollView, Text, TouchableOpacity } from "react-native";
 import { NavigationInjectedProps, NavigationScreenProps } from "react-navigation";
 import { homeScreenStyles as styles } from "../general/styles";
-import { RoundButton } from "../general/components/Button";
 
 interface HomeScreenProps {
     navigation: NavigationScreenProps<any, any>;
@@ -48,7 +47,6 @@ export default class Home extends Component<HomeProps> {
                              </TouchableOpacity>
                          </View>
                     </ScrollView>
-                    <RoundButton onPress={this.handler} />
                 </View>
         );
     }

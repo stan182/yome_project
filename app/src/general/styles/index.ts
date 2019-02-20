@@ -49,4 +49,12 @@ const roundButtonStyles = StyleSheet.create({
     }
 })
 
-export { styles, roundButtonStyles, commonStyles, homeScreenStyles };
+const mock = StyleSheet.create({
+    text: {
+        fontSize: 36,
+        color: "red",
+        fontWeight: "bold"
+    }
+})
+
+export { roundButtonStyles, commonStyles, homeScreenStyles, mock };
