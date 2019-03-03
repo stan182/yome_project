@@ -19,6 +19,22 @@ interface Event  {
     sum: Money,
     participants: UserId[]
 }
+// validateEvent :: Event -> m Unit
+const validateEvent = (event: Event): Promise<void> => {
+    if (participants not include payer) {
+        throw 'No payer in participants';
+    } else if (false) {
+        // ...
+        throw 'Something else went wrong';
+    } else {
+        return;
+    }
+}
+
+// request -> event
+// await validateEvent(event)
+// db.store(event)
+
 const generateComment = () => {
     return "asdf";
 }
