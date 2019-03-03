@@ -9,6 +9,17 @@ interface HomeScreenProps {
 
 type HomeProps = HomeScreenProps & NavigationInjectedProps;
 
+type UserId = string;
+type Money = number;
+type Event = {
+    datetime: Date,
+    comment: string,
+    payer: UserId,
+    sum: Money,
+    participants: UserId[]
+}
+const events: Event[] = [{ datetime: Date.now(), comment: 'asdf', payer: 'DK', sum: 1000, participants: ['DK', 'SE'] }];
+
 export default class Home extends Component<HomeProps> {
     render() {
         return (
@@ -55,6 +66,8 @@ export default class Home extends Component<HomeProps> {
         console.log("CLICK")
     }
 }
+
+
 
 // type Event = { datetime: DateTime, comment: Text, payer: UserId, sum: Money, participants: f UserId }
 
