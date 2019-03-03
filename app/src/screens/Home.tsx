@@ -22,6 +22,12 @@ interface Event  {
 const generateComment = () => {
     return "asdf";
 }
+
+// TODO: hardcode friends
+const generateUserId = () => ` User${Math.floor(Math.random()*100)}`;
+
+const generateSum = () => Math.floor(Math.random() * 1000);
+
 // generateEvent :: Unit -> Eff (random :: RANDOM) Event
 const generateEvent = () => {
     return {
@@ -29,18 +35,21 @@ const generateEvent = () => {
         comment: generateComment(),
         payer: generateUserId(),
         sum: generateSum(),
-        participants: _.fill(Array(Math.floor(Math.random() * 10))+1, 1).map(() => generateUserId())
+        participants: _.fill(Array(Math.floor(Math.random() * 10)+1), 1).map(() => generateUserId())
     };
 }
-const events: Event[] = _.fill(Array(Math.floor(Math.random() * 100))+1, 1).map(() => generateEvent());
+const events: Event[] = _.fill(Array(Math.floor(Math.random() * 100)+1), 1).map(() => generateEvent());
 
 type TapHandler = () => void;
+
+
+const eventToString = (event: Event): string => `${event.comment} ${event.datetime} ${event.sum} ${event.payer} ${event.participants}`
 
 // :: TapHandler -> Event -> UI
 const showEvent = (event: Event, handler: TapHandler): ? => (
     <TouchableOpacity onPress={handler}>
         <View style={styles.eventContainer} >
-            <Text style={{fontSize: 24}}>{event.comment}</Text>
+            <Text >{eventToString(event)}</Text>
         </View>
     </TouchableOpacity>
 )
