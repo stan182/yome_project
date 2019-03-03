@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "npm install -g react-native react-native-cli && yarn && node_modules/.bin/tsc && react-native run-ios"
+    "build": "npm install -g react-native-cli && npm && node_modules/.bin/tsc && react-native run-ios"
   },
   "dependencies": {
     "@types/react-navigation-material-bottom-tabs": "0.3.1",
@@ -32,7 +32,7 @@
     "eslint-plugin-react": "7.12.4",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.48.5",
-    "react-native": "0.57.7",
+    "react-native": "^0.58.5",
     "react-native-gesture-handler": "1.0.15",
     "react-test-renderer": "16.6.1",
     "tslint-config-prettier": "1.16.0",

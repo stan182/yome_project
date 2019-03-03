@@ -7,14 +7,13 @@ import { NavigationRoutes } from "./general/models";
 // @ts-ignore
 import Icon from "react-native-vector-icons/Ionicons";
 import React from "react";
-import { Platform } from "react-native";
 
 const Navigator = createMaterialBottomTabNavigator(
     {
         Home: {
             screen: Home,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => {
+                tabBarIcon: ({ tintColor}: any) => {
                     return (
                         <Icon
                             size={25}
@@ -28,7 +27,7 @@ const Navigator = createMaterialBottomTabNavigator(
         Add: {
             screen: AddEvent,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => {
+                tabBarIcon: ({ tintColor }: any) => {
                     return (
                         <Icon
                             size={25}
@@ -42,7 +41,7 @@ const Navigator = createMaterialBottomTabNavigator(
         Profile: {
             screen: Profile,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => {
+                tabBarIcon: ({ tintColor }: any) => {
                     return (
                         <Icon
                             size={25}
