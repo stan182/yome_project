@@ -19,11 +19,24 @@ interface Event  {
     sum: Money,
     participants: UserId[]
 }
-const events: Event[] = [{ datetime: Date.now(), comment: 'asdf', payer: 'DK', sum: 1000, participants: ['DK', 'SE'] }];
+const generateComment = () => {
+    return "asdf";
+}
+// generateEvent :: Unit -> Eff (random :: RANDOM) Event
+const generateEvent = () => {
+    return {
+        datetime: Date.now(),
+        comment: generateComment(),
+        payer: generateUserId(),
+        sum: generateSum(),
+        participants: _.fill(Array(Math.floor(Math.random() * 10))+1, 1).map(() => generateUserId())
+    };
+}
+const events: Event[] = _.fill(Array(Math.floor(Math.random() * 100))+1, 1).map(() => generateEvent());
 
-// :: TapHandler -> Event -> UI
 type TapHandler = () => void;
 
+// :: TapHandler -> Event -> UI
 const showEvent = (event: Event, handler: TapHandler): ? => (
     <TouchableOpacity onPress={handler}>
         <View style={styles.eventContainer} >
