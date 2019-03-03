@@ -55,3 +55,14 @@ export default class Home extends Component<HomeProps> {
         console.log("CLICK")
     }
 }
+
+// type Event = { datetime: DateTime, comment: Text, payer: UserId, sum: Money, participants: f UserId }
+
+// type Event = { datetime: DateTime, comment: Text, participants: { [UserId]: { cheque: Money, paid: Money } } }
+
+// History
+// :: f Event
+// :: f Event -> f (UI (Event'))
+
+// Summary
+// ?
