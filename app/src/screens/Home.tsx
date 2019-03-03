@@ -21,19 +21,22 @@ interface Event  {
 }
 const events: Event[] = [{ datetime: Date.now(), comment: 'asdf', payer: 'DK', sum: 1000, participants: ['DK', 'SE'] }];
 
+// :: TapHandler -> Event -> UI
+const x = (tapHandler: TapHandler) => (event: Event): ? => (
+    <TouchableOpacity onPress={tapHandler}>
+        <View style={styles.eventContainer} >
+            <Text style={{fontSize: 24}}>{event.comment}</Text>
+        </View>
+    </TouchableOpacity>
+)
+
 export default class Home extends Component<HomeProps> {
     render() {
         return (
                 <View style={styles.mainContainer}>
                     <ScrollView>
                          <View style={styles.container}>
-                            {_.map(events, event => (
-                             <TouchableOpacity onPress={this.handler}>
-                                <View style={styles.eventContainer} >
-                                    <Text style={{fontSize: 24}}>{event.comment}</Text>
-                                </View>
-                             </TouchableOpacity>
-                            )}
+                            {_.map(events, event => x(event)}
                          </View>
                     </ScrollView>
                 </View>
