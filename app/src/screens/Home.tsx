@@ -11,8 +11,8 @@ type HomeProps = HomeScreenProps & NavigationInjectedProps;
 
 type UserId = string;
 type Money = number;
-type Event = {
-    datetime: Date,
+interface Event  {
+    datetime: number,
     comment: string,
     payer: UserId,
     sum: Money,
