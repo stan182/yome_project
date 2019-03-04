@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 const commonStyles = StyleSheet.create({
     scrollView: {
         flex: 1,
-    }
-})
+    },
+});
 
 const homeScreenStyles = StyleSheet.create({
     mainContainer: {
@@ -14,18 +14,41 @@ const homeScreenStyles = StyleSheet.create({
     container: {
         marginVertical: 20,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
-    eventContainer: {
-           backgroundColor: "#935ff14a",
-           borderWidth: 1,
-           padding: 5,
-           margin: 10,
-           borderRadius: 10,
-           width: 300,
-           height: 50,
+});
+
+const eventListItemStyle = StyleSheet.create({
+    container: {
+        backgroundColor: "#935ff14a",
+        padding: 5,
+        margin: 5,
+    },
+    header: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        fontSize: 24,
+        padding: 5,
+        borderBottomWidth: 1,
+        borderBottomColor: "white"
+    },
+    main: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+    info: {
+        width: "75%",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        padding: 5,
+    },
+    sum: {
+        width: "25%",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: 5,
     }
-})
+});
 
 const roundButtonStyles = StyleSheet.create({
     container: {
@@ -46,15 +69,15 @@ const roundButtonStyles = StyleSheet.create({
         fontSize: 32,
         alignSelf: "center",
         lineHeight: 32,
-    }
-})
+    },
+});
 
 const mock = StyleSheet.create({
     text: {
         fontSize: 36,
         color: "red",
-        fontWeight: "bold"
-    }
-})
+        fontWeight: "bold",
+    },
+});
 
-export { roundButtonStyles, commonStyles, homeScreenStyles, mock };
+export { roundButtonStyles, eventListItemStyle, commonStyles, homeScreenStyles, mock };
