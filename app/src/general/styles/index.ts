@@ -9,7 +9,7 @@ const commonStyles = StyleSheet.create({
 const homeScreenStyles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        backgroundColor: "#F5FCFF",
+        backgroundColor: "#B0BEC5",
     },
     container: {
         marginVertical: 20,
@@ -20,9 +20,12 @@ const homeScreenStyles = StyleSheet.create({
 
 const eventListItemStyle = StyleSheet.create({
     container: {
-        backgroundColor: "#935ff14a",
+        backgroundColor: "#37474F",
         padding: 5,
         margin: 5,
+        borderWidth: 1,
+        borderColor: "lightgrey",
+        borderRadius: 4,
     },
     header: {
         flexDirection: "row",
@@ -30,7 +33,7 @@ const eventListItemStyle = StyleSheet.create({
         fontSize: 24,
         padding: 5,
         borderBottomWidth: 1,
-        borderBottomColor: "white"
+        borderBottomColor: "#fffb32"
     },
     main: {
         flexDirection: "row",
@@ -61,7 +64,7 @@ const roundButtonStyles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignSelf: "flex-end",
-        backgroundColor: "#935ff1",
+        backgroundColor: "#FF6F00",
         borderRadius: 64,
     },
     title: {

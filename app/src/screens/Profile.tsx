@@ -16,10 +16,10 @@ export default class Profile extends Component<ProfileProps> {
                 <View style={styles.mainContainer}>
                     <ScrollView>
                          <View style={styles.container}>
-                         <View style={{flexDirection: 'row', jusifyContent: "center", backgroundColor: "#935ff1", height: 150}}>
+                         <View style={{flexDirection: 'row', jusifyContent: "center", backgroundColor: "#37474F", height: 150}}>
                                  <Image source={Images.avatar} resizeMode="contain" style={{width: 128, height: 128, margin: 10}}/>
                              <View style={{flex: 1, justifyContent: "center"}}>
-                                 <Text style={{fontSize: 32, color: "white"}}>Surprised Cat</Text>
+                                 <Text style={{fontSize: 32, color: "#ECEFF1"}}>Surprised Cat</Text>
                              </View>
                          </View>
                              <Text style={mock.text}>PROFILE SCREEN</Text>

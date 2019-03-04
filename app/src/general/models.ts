@@ -11,6 +11,7 @@ type Money = number;
 type TapHandler = () => void;
 
 interface Event {
+    id: string;
     datetime: string;
     comment: string;
     payer: UserId;

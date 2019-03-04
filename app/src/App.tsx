@@ -56,7 +56,7 @@ const Navigator = createMaterialBottomTabNavigator(
     {
         initialRouteName: NavigationRoutes.Home,
         shifting: true,
-        barStyle: { backgroundColor: "#935ff1" },
+        barStyle: { backgroundColor: "#263238" },
     }
 );
 

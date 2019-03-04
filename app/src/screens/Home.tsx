@@ -15,9 +15,9 @@ export default class Home extends Component<HomeProps> {
     render() {
         return (
             <View style={styles.mainContainer}>
-                <ScrollView>
+                <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={styles.container}>
-                        {_.map(events, event => <EventListItem key={event.datetime} event={event} handler={this.handler} />)}
+                        {_.map(events, event => <EventListItem key={event.id} event={event} handler={this.handler} />)}
                     </View>
                 </ScrollView>
             </View>

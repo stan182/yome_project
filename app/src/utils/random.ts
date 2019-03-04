@@ -1,5 +1,6 @@
 import { Event } from "../general/models";
 import _ from "lodash";
+import uuid from "uuid/v4";
 
 const generateDatetime = () => {
 	const date = new Date(2019, Math.random()*11, Math.random()*28)
@@ -15,6 +16,7 @@ const generateSum = () => Math.floor(Math.random() * 10000);
 // generateEvent :: Unit -> Eff (random :: RANDOM) Event
 const generateEvent = () => {
     return {
+		id: uuid(),
         datetime: generateDatetime(),
         comment: generateComment(),
         payer: generateUserId(),
