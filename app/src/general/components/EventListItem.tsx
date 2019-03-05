@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { eventListItemStyle as styles } from "../styles";
 import { Event } from "../models";
+import _ from "lodash";
 
 interface EventListItemProps {
     event: Event;
@@ -17,26 +18,35 @@ class EventListItem extends Component<EventListItemProps> {
                         <Text style={{ fontSize: 24, fontWeight: "bold", color: "#ECEFF1" }}>
                             {this.props.event.comment}
                         </Text>
-                        <Text style={{ fontSize: 18, color: "#ECEFF1" }}>{this.props.event.datetime}</Text>
+                        <Text style={{ fontSize: 18, color: "#ECEFF1" }}>
+                            {this.props.event.datetime}
+                        </Text>
                     </View>
                     <View style={styles.main}>
                         <View style={styles.info}>
                             <Text style={{ fontSize: 18, color: "#ECEFF1" }}>
                                 Payers:
-                                <Text style={{ fontSize: 18, fontWeight: "bold", color: "#ECEFF1" }}>
-                                    {" "}
+                                <Text
+                                    style={{ fontSize: 18, fontWeight: "bold", color: "#ECEFF1" }}
+                                >
                                     {this.props.event.payer}
                                 </Text>
                             </Text>
                             <Text style={{ fontSize: 18, color: "#ECEFF1" }}>
                                 Participants:
-                                <Text style={{ fontSize: 18, fontWeight: "bold", color: "#ECEFF1" }}>
-                                    {this.props.event.participants}
+                                <Text
+                                    style={{
+                                        fontSize: 18,
+                                        fontWeight: "bold",
+                                        color: "#ECEFF1",
+                                    }}
+                                >
+                                    {this.props.event.participants.join(", ")}
                                 </Text>
                             </Text>
                         </View>
                         <View style={styles.sum}>
-                            <Text style={{ fontSize: 24, fontWeight: "bold", color: "#fffb32"}}>
+                            <Text style={{ fontSize: 24, fontWeight: "bold", color: "#fffb32" }}>
                                 {this.props.event.sum} RUB
                             </Text>
                         </View>
