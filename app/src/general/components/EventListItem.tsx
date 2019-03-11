@@ -25,24 +25,27 @@ class EventListItem extends Component<EventListItemProps> {
                     <View style={styles.main}>
                         <View style={styles.info}>
                             <Text style={{ fontSize: 18, color: "#ECEFF1" }}>
-                                Payers:
+                                Payer:
                                 <Text
                                     style={{ fontSize: 18, fontWeight: "bold", color: "#ECEFF1" }}
                                 >
-                                    {this.props.event.payer}
+                                    {` ${this.props.event.payer.name}`}
                                 </Text>
                             </Text>
                             <Text style={{ fontSize: 18, color: "#ECEFF1" }}>
                                 Participants:
-                                <Text
-                                    style={{
-                                        fontSize: 18,
-                                        fontWeight: "bold",
-                                        color: "#ECEFF1",
-                                    }}
-                                >
-                                    {this.props.event.participants.join(", ")}
-                                </Text>
+                                {_.map(this.props.event.participants, participant => (
+                                    <Text
+                                        style={{
+                                            fontSize: 18,
+                                            fontWeight: "bold",
+                                            color: "#ECEFF1",
+                                        }}
+                                        key={participant.id}
+                                    >
+                                        {` ${participant.name},`}
+                                    </Text>
+                                ))}
                             </Text>
                         </View>
                         <View style={styles.sum}>

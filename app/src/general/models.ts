@@ -4,7 +4,10 @@ enum NavigationRoutes {
     Profile = "Profile",
 }
 
-type User = string;
+interface User {
+    id: string,
+    name: string,
+};
 
 type Money = number;
 
@@ -16,7 +19,7 @@ interface Event {
     comment: string;
     payer: User;
     sum: Money;
-    participants: string[];
+    participants: User[];
 }
 
 export { NavigationRoutes, User, Money, TapHandler, Event };
